@@ -159,7 +159,7 @@ if __name__ == "__main__":
     df["p_susceptibilidad"] = p
 
     etiqueta_binaria = rng.binomial(1, p)
-    df["susceptibilidad"] = np.where(etiqueta_binaria == 1, 1, 2)
+    df["susceptibilidad"] = np.where(etiqueta_binaria == 1, 0, 1)
 
     print(f"Intercepto calibrado beta_0 = {b0:.3f}")
     print(f"Probabilidad media = {p.mean():.3f}")
